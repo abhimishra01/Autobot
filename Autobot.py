@@ -27,7 +27,7 @@ print('''
 ''')
 while True:
     inp=input('Please input the name of technology in which you need to implement this tool : ')
-    if ((('Hadoop' in inp) or ('hadoop' in inp) or ('bigdata in hadoop')) and ('cluster' in inp)):
+    if ((('Hadoop' in inp) or ('hadoop' in inp) or ('bigdata in hadoop')) and (('cluster' in inp) or ('Cluster' in inp))):
         os.system('python3 hadoop.py')
     elif ((('aws' in inp) or ('AWS' in inp) or ('Amazon' in inp) or ('Aws' in inp) or ('AWs' in inp)) and (('cli' in inp) or ('CLI' in inp))):
         os.system('python3 aws_auto.py')

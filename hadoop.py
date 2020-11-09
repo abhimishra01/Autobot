@@ -15,7 +15,7 @@ while True:
         elif("datanode" in inp) or ("data node" in inp) or ("slave" in inp):
             n=1
         else:
-            node=input("Which node do you want to setup?")
+            node=input("Which node do you want to setup? : ")
             while True:
                 if("namenode" in node) or ("name node" in node) or ("master" in node):
                     n=0
@@ -25,8 +25,7 @@ while True:
                     break
                 else:
                     print("Invalid choice.")
-                    node=input("please enter again(datanode/namenode)?:")
-        print(n)
+                    node=input("please enter again(datanode/namenode)? : ")
         os.system('tput setaf  5')
         mkd=input("give the name of the directory : ")
         os.system('mkdir /{}'.format(mkd))
@@ -80,7 +79,7 @@ while True:
                     
         else:
             os.system("hadoop-daemon.sh start datanode")
-            os.system("figlet  Datanode started")
+            os.system("figlet  Datanode Started")
          
     
 

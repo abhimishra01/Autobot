@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 import getpass
 os.system('clear')
