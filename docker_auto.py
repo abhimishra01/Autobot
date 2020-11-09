@@ -4,7 +4,7 @@ os.system('clear')
 os.system("tput setaf 2")
 os.system('figlet Docker Automation')
 inp = input('What Can I Do for you : ')
-if ((('run' in inp) or ('launch' in inp)) and (('container' in inp) or ('Operating system' in inp) or ('os' in inp))):
+if ((('launch' in inp) or ('Launch' in inp)) and (('new' in inp)) and (('container'in inp) or ('Operating system' in inp) or ('os' in inp))):
     os.system("tput setaf 3")
     container_name= input('Please tell what will be the name of container? : ')
     os.system('espeak-ng Please tell what will be the name of container?')
@@ -23,7 +23,7 @@ if ((('run' in inp) or ('launch' in inp)) and (('container' in inp) or ('Operati
          print("Image Unavailable Pulling the image from Docker Hub")
          os.system("espeak-ng Image Unavailable Pulling the image from Docker Hub")
          os.system("docker pull {}:{}".format(image_name,image_version))
-elif((('webserver' in inp) or ('httpd' in inp ) or ('apache' in inp)) and (('run' in inp) or ('container' in inp ) or ('docker' in inp))):
+elif((('webserver' in inp) or ('httpd' in inp)  or ('apache' in inp)) and (('container' in inp) or ('docker' in inp))):
         os.system("tput setaf 3")
         container_name= input('Please tell what will be the name of container? : ')
         os.system('espeak-ng Please tell what will be the name of container?')
@@ -32,18 +32,50 @@ elif((('webserver' in inp) or ('httpd' in inp ) or ('apache' in inp)) and (('run
         port= input('Please input the port Number on which your Webserver will run : ')
         path= input('Please Input the path of your webserver file : ')
         os.system('docker ps | grep centos:latest > /dev/null' )
-        if os.system('echo #?')==0:
+        if os.system('echo $?')==0:
             os.system("tput setaf 5")
             print('Just a sec Launching your Docker container........')
             os.system('docker run -dit   -p {1}:80    --name {0} centos'.format(container_name,port))
             os.system("docker exec {} yum install httpd -y > /dev/null".format(container_name))
             print('Please Wait while we are configuring the webserver for you...!')
-            os.system("docker cp {0} {1}:/var/www/httpd/".format(path,container_name))
+            os.system("docker cp {} {}:/var/www/httpd/".format(path,container_name))
             os.system('docker exec  {} /usr/sbin/httpd'.format(container_name))
             os.system("tput setaf 3")
             os.system('figlet Launched Webserver on Port {}'.format(port))
-            
-
-
+            os.system('sleep 3')
+            os.system('python3 docker_auto.py')
+elif (('start' in inp) and (('container' in inp) or ('service' in inp) or ('docker' in inp)  or ('Docker' in inp))):
+    os.system('tput setaf 2')
+    os.system('systemctl start docker ')        
+    os.system('systemctl disable firewalld > /dev/null')
+    os.system('figlet Docker Service Started')
+    os.system('python3  docker_auto.py')
+elif ((('show' in inp) or ('docker' in inp) or ('Docker' in inp) or ('DOCKER' in inp) or  ('Container'  in inp)  or ('display' in inp)  or ('see' in inp)) and (('Images' in inp)  or ('images'  in inp))):
+    os.system('tput setaf  6')
+    os.system('docker images')
+    os.system('sleep 5')
+    os.system('python3  docker_auto.py')
+elif ((('show' in inp) or ('docker' in inp) or ('Docker' in inp) or ('DOCKER' in inp) or  ('Container' in inp) or ('display' in inp) or ('see' in inp)) and (('running'  in inp) or ('containers' in inp) or ('Containers' in inp))):
+    os.system('tput setaf 5')
+    os.system('docker ps')
+    os.system('sleep 5')
+    os.system('python3  docker_auto.py')
+elif ((('show' in inp)  or ('see' in inp) or ('display'  in inp)) and (('stopped' in inp) or ('Images' in inp)  or ('IMAGES' in inp)) and (('Docker' in inp)  or ('container' in inp)  or ('Container' in inp) or ('containers' in inp) or ('CONTAINERS' in inp)  or ('Containers' in inp))):
+    os.system('tput setaf 5')
+    os.system('docker ps -a')
+    os.system('sleep 5')
+    os.system('python3  docker_auto.py')
+elif ((('remove' in inp) or ('delete' in inp) or ('terminate' in inp) or ('Remove' in inp) or ('Delete' in inp) or ('Terminate' in inp))  and ('single' in inp) and (('container' in inp) or ('Container' in inp))):
+    os.system('tput setaf 4')
+    os.system('docker ps -aq')
+    rm=input('Please input the name/id of the container you want to terminate : ')
+    os.system('docker rm -f  {}'.format(rm))
+elif ((('terminate' in inp)  or ('remove' in inp) or ('delete' in inp) or ('forecefully' in inp) or ('clean' in inp)) and (('All' in inp) or ( 'all' in inp) or ('everything' in inp)) and (('Containers' in inp) or ('os' in inp)  or ('CONTAINERS' in inp) or ('containers' in inp))):
+    os.system('tput setaf 6')
+    os.system('docker rm -f  $(docker ps  -aq)')
+    os.system('figlet  Cleaned Everything')
+    os.system('sleep 3')
+    os.system('python3  docker_auto.py')
+    
 else:
     exit()
