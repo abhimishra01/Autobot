@@ -2,14 +2,13 @@
 import os 
 os.system('clear')
 os.system('tput setaf  4')
-os.system('yum list | grep yattag  >  /dev/null ')
-os.system('clear')
 print('Please wait while we are resolving dependencies....!')
-if os.system('echo $? > /dev/null')!=0:
+os.system('yum list | grep yattag  >  /dev/null ')
+if os.system('echo $? > /dev/null')==1:
     os.system("rpm -ivh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm")
     os.system("yum install figlet -y")
-os.system("pip3 list| grep yattag > /dev/null")
-if os.system('echo $?')!=0:
+os.system("pip3 list | grep yattag > /dev/null")
+if os.system('echo $? >  /dev/null')==1:
     os.system("pip3 install yattag")
 os.system('clear')
 os.system('tput setaf  6')
