@@ -1,4 +1,5 @@
 import os 
+os.system('clear')
 while True:
     os.system('tput setaf  1')
     os.system('figlet  Autobot: The Automation Tool')
@@ -22,6 +23,7 @@ while True:
         break
 
 
+os.system('tput setaf 7')
                 
 
 
