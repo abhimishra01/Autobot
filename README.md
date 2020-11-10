@@ -1,7 +1,9 @@
                                              AutoBot Installation Documention:-
 
 •	Introduction:-
+
 o	Autobot is a Terminal User Interface Automation program made with Python Programming Language and build on concepts of Integration of Technologies for the sake of making Automation as much as possible.
+
 o	Currently Autobot  Version 1.0  is having capability of providing automation to five different technologies:-
 	Centos/Redhat Enterprise Linux Operating System
 	Docker Container Engine.
