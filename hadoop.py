@@ -3,8 +3,8 @@ import os
 import subprocess as sb
 from yattag import Doc,indent
 os.system('clear')
-os.system('tput setaf  6')
-os.system("figlet 'Hadoop \nautomation' -f small")
+os.system('tput setaf  1')
+os.system("figlet 'Hadoop Automation' ")
 n=0
 while True:
     os.system('tput setaf  6')
