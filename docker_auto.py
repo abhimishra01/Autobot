@@ -39,7 +39,7 @@ elif((('webserver' in inp) or ('httpd' in inp)  or ('apache' in inp)) and (('con
             os.system('docker run -dit   -p {1}:80    --name {0} centos'.format(container_name,port))
             os.system("docker exec {} yum install httpd -y > /dev/null".format(container_name))
             print('Please Wait while we are configuring the webserver for you...!')
-            os.system("docker cp {} {}:/var/www/httpd/".format(path,container_name))
+            os.system("docker cp {} {}:/var/www/html/".format(path,container_name))
             os.system('docker exec  {} /usr/sbin/httpd'.format(container_name))
             os.system("tput setaf 3")
             os.system('figlet Launched Webserver on Port {}'.format(port))
