@@ -83,15 +83,15 @@ with starting of hadoop namenode/datanode.
 
                                                            Feel Free to Reach our Developers for any sort of queries and help:-
 
-                                                                                                  	Abhishek Mishra https://www.linkedin.com/in/moonwalkerabhi/
+                                                                                  	Abhishek Mishra https://www.linkedin.com/in/moonwalkerabhi/
                                                                       
-                                                                                                  	Deepali Ghadia  https://www.linkedin.com/in/deepali-ghadia-932aa01a6
+                                                                                  	Deepali Ghadia  https://www.linkedin.com/in/deepali-ghadia-932aa01a6
 
-                                                                                                  	Snehal Shinde  https://www.linkedin.com/in/snehal-shinde-578705172/
+                                                                                  	Snehal Shinde  https://www.linkedin.com/in/snehal-shinde-578705172/
 
-                                                                                                  	Aishwarya Birla 
+                                                                                  	Aishwarya Birla 
     
-                                                                                                  	Rahul Kashyap
+                                                                                  	Rahul Kashyap
 
                                                                                                                                                          
 
