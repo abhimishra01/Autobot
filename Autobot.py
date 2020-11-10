@@ -19,6 +19,8 @@ while True:
         os.system('python3 aws_auto.py')
     elif ((('Docker' in inp) or ('docker' in inp) or ('container' in inp) or ('engine' in inp) or ('DOCKER' in inp))):
         os.system(' python3 docker_auto.py')
+    elif ((('install' in inp) or ('resolve' in inp)) and ( ('dependencies' in inp) or ('requirements' in inp))):
+        os.system('python3 dependencies.py')
     elif (('exit' in inp) or ('bye' in inp) or ('break' in inp) or ('goodbye' in inp) or ('shutdown' in inp) or ('tata' in inp)):
         break
 
