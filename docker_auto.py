@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 import os 
 os.system('clear')
-os.system("tput setaf 2")
-os.system('figlet Docker Automation')
+os.system("tput setaf 3")
+os.system('figlet       Docker Automation')
+os.system("tput setaf 1")
 inp = input('What Can I Do for you : ')
 if ((('launch' in inp) or ('Launch' in inp)) and (('new' in inp)) and (('container'in inp) or ('Operating system' in inp) or ('os' in inp))):
     os.system("tput setaf 3")
@@ -78,4 +79,5 @@ elif ((('terminate' in inp)  or ('remove' in inp) or ('delete' in inp) or ('fore
     os.system('python3  docker_auto.py')
     
 else:
+    os.system('clear')
     exit()
