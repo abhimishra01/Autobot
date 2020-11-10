@@ -6,7 +6,7 @@ o	Autobot is a Terminal User Interface Automation program made with Python Progr
 
 o	Currently Autobot  Version 1.0  is having capability of providing automation to five different technologies:-
 
-	Centos/Redhat Enterprise Linux Operating System
+	Centos/Redhat Enterprise Linux Operating System Version 8.0
 
 	Docker Container Engine.
 
@@ -89,9 +89,9 @@ with starting of hadoop namenode/datanode.
 
                                                     	Snehal Shinde  https://www.linkedin.com/in/snehal-shinde-578705172/
 
-                                                    	Aishwarya Birla 
+                                                    	Aishwarya Birla https://www.linkedin.com/in/aishwarya-birla-b63395184
     
-                                                    	Rahul Kashyap
+                                                    	Rahul Kashyap   https://www.linkedin.com/in/rahul-kashyap-98a27b1b8/
 
                                                                                                                                                          
 
