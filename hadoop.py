@@ -3,10 +3,10 @@ import os
 import subprocess as sb
 from yattag import Doc,indent
 os.system('clear')
-os.system('tput setaf  1')
-os.system("figlet 'Hadoop Automation' ")
 n=0
 while True:
+    os.system('tput setaf  1')
+    os.system("figlet 'Hadoop Automation' ")
     os.system('tput setaf  6')
     inp=input("What can I do for you? : ")
     if ("setup" in inp):
@@ -74,13 +74,19 @@ while True:
             if os.system('echo  $?')==0:
                 os.system("figlet  Namenode Started")
                 os.system("jps")
+                os.system('sleep 5')
+                os.system('clear')
             else:
                 os.system("figlet  Namenode Start error")
+                os.system('clear')
                     
         else:
             os.system("hadoop-daemon.sh start datanode")
+            os.system('tput setaf 3')
             os.system('jps')
             os.system("figlet  Datanode Started")
+            os.system('sleep 5')
+            os.system('clear')
          
     
     elif ((('install' or 'download' or 'package' or 'rpm' or 'software' in inp)  and ('hadoop' in inp))):
@@ -92,8 +98,10 @@ while True:
         os.system('rpm -ivh   jdk-8u171-linux-x64.rpm')
         os.system('rpm -ivh   hadoop-1.2.1-1.x86_64.rpm --force')
         os.system('figlet Hadoop & JDK installed..!')
-        os.system('sleep 3')    
+        os.system('sleep 3')   
+        os.system('clear')
     elif("bye" or "exit" or "quit" in inp):
         os.system('tput setaf 7')
+        os.system('clear')
         break
 
