@@ -57,7 +57,7 @@ while True:
                 with tag1('name'):
                         text1('fs.default.name')
                 with tag1('value'):
-                    text1('hdfs://{}:9001'.format(ip))
+                    text1('hdfs://{}'.format(ip)+':9001')
         res=indent(
         doc1.getvalue(),
         indentation =' '*4,
