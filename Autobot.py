@@ -1,41 +1,25 @@
-#!/usr/sbin/python3
 import os 
 os.system('clear')
 os.system('tput setaf  3')
 print('Please wait while we are resolving dependencies....!')
-#os.system('yum list | grep figlet  >  /dev/null ')
-#if os.system('echo $? > /dev/null')==1:
 os.system("rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm")
 os.system("dnf install figlet -y")
-#os.system("pip3 list | grep yattag > /dev/null")
-#if os.system('echo $? >  /dev/null')==1:
 os.system("pip3 install yattag")
 os.system('clear')
-print('''This automation tool is an integration of 5 Different Technologies:-
-Linux Operating System--Docker Container Engine--Hadoop Cluster--Amazon Web Services Command Line Interface ''')
 os.system('tput setaf 3')
-print('This program is capable of making things way easier and handy to make your workcycle faster and efficient ')
-os.system('tput setaf  5')
-print(''' 
-    Hadoop Cluster
-    AWS CLI 
-    Docker 
-''')
 while True:
-    os.system('tput setaf  6')
-    os.system('figlet  Welcome to Autobot:- The Automation tool')
+    os.system('tput setaf  1')
+    os.system('figlet  Autobot: The Automation Tool')
     os.system('tput setaf  2')
-    print('''This automation tool is an integration of 5 Different Technologies:-
-Linux Operating System--Docker Container Engine--Hadoop Cluster--Amazon Web Services Command Line Interface ''')
-    os.system('tput setaf 3')
-    print('This program is capable of making things way easier and handy to make your workcycle faster and efficient ')
+    print('Autobot is capable of making your workcycle easier ,faster &  efficient ')
     os.system('tput setaf  5')
     print(''' 
         Hadoop Cluster
         AWS CLI 
         Docker 
         ''')
-    inp=input('Please input the name of technology in which you need to implement this tool : ')
+    os.system('tput setaf 3')
+    inp=input('Please input the name of technology among above : ')
     if ((('Hadoop' in inp) or ('hadoop' in inp) or ('bigdata in hadoop')) and (('cluster' in inp) or ('Cluster' in inp))):
         os.system('python3 hadoop.py')
     elif ((('aws' in inp) or ('AWS' in inp) or ('Amazon' in inp) or ('Aws' in inp) or ('AWs' in inp)) and (('cli' in inp) or ('CLI' in inp))):
