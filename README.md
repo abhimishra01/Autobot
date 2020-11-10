@@ -81,17 +81,17 @@ with starting of hadoop namenode/datanode.
 
 	Soon our team members are working to implement some more Cloud Computing services in this software.
 
-Developers:-
+        Developers:-
 
-                                                                                                                                                        	Abhishek Mishra 
+                                                                                                                   	Abhishek Mishra 
 
-                                                                                                                                                        	Deepali Ghadia
+                                                                                                                   	Deepali Ghadia
 
-                                                                                                                                                          	Snehal Shinde
+                                                                                                                   	Snehal Shinde
 
-                                                                                                                                                        	Aishwarya Birla
+                                                                                                                   	Aishwarya Birla
     
-                                                                                                                                                          	Rahul Kashyap
+                                                                                                                   	Rahul Kashyap
 
                                                                                                                                                          
 
