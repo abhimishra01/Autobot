@@ -83,15 +83,15 @@ with starting of hadoop namenode/datanode.
 
         Developers:-
 
-                                                                                                                   	Abhishek Mishra 
+                                                                                                           	Abhishek Mishra 
+                                                                      
+                                                                                                           	Deepali Ghadia
 
-                                                                                                                   	Deepali Ghadia
+                                                                                                           	Snehal Shinde
 
-                                                                                                                   	Snehal Shinde
-
-                                                                                                                   	Aishwarya Birla
+                                                                                                           	Aishwarya Birla
     
-                                                                                                                   	Rahul Kashyap
+                                                                                                           	Rahul Kashyap
 
                                                                                                                                                          
 
