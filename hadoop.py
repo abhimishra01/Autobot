@@ -79,6 +79,7 @@ while True:
                     
         else:
             os.system("hadoop-daemon.sh start datanode")
+            os.system('jps')
             os.system("figlet  Datanode Started")
          
     
