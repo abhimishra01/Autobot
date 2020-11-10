@@ -82,7 +82,16 @@ while True:
             os.system("figlet  Datanode Started")
          
     
-
+    elif ((('install' or 'download' or 'package' or 'rpm' or 'software' in inp)  and ('hadoop' in inp))):
+        print('Please wait while we are installing Hadoop version 1.2 and Oracle JDK ...!!')
+        os.system('pip3 install gdown')
+        os.system('gdown https://drive.google.com/file/d/17UWQNVdBdGlyualwWX4Cc96KyZhD-lxz/view?usp=sharing')
+        os.system('gdown  https://drive.google.com/file/d/1541gbFeGZZJ5k9Qx65D04lpeNBw87rM5/view?usp=sharing')
+        os.chdir('/root/hadoopv1.2')
+        os.system('rpm -ivh   jdk-8u171-linux-x64.rpm')
+        os.system('rpm -ivh   hadoop-1.2.1-1.x86_64.rpm --force')
+        os.system('figlet Hadoop & JDK installed..!')
+        os.system('sleep 3')    
     elif("bye" or "exit" or "quit" in inp):
         os.system('tput setaf 7')
         break
